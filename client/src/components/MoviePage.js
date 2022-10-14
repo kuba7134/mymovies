@@ -10,16 +10,17 @@ const MoviePage = () => {
     const [movie, setMovie] = useState("");
     const options = {
         method: 'GET',
-        url: 'http://localhost:8000/movie',
+        url: 'https://my-movies7.herokuapp.com/movie',
         params: { id: imdbID, r: 'json' },
     };
     useEffect(() => {
-            axios.request(options).then(function (response) {
-                console.log(response.data);
-                setMovie(response.data)
-            }).catch(function (error) {
-                console.error(error);
-            });
+        window.scrollTo(0, 0)
+        axios.request(options).then(function (response) {
+            console.log(response.data);
+            setMovie(response.data)
+        }).catch(function (error) {
+            console.error(error);
+        });
     }, [])
 
     return (
@@ -47,8 +48,8 @@ const MoviePage = () => {
                     exit={{ opacity: 0 }}
                 >
                     <motion.h1
-                        initial={{ y: "-20vh", opacity: 0}}
-                        animate={{ y: 0, opacity: 1}}
+                        initial={{ y: "-20vh", opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: .4 }}>
                         {movie.Title}
                     </motion.h1>

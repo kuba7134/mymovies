@@ -11,7 +11,7 @@ const Login = (props) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [ denial, setDenial ] = useState(false)
     const onSubmit = (data) => {
-        axios.post('http://localhost:8000/login', data)
+        axios.post('https://my-movies7.herokuapp.com/login', data)
             .then(function (response) {
                 if (response.data.status === "ok") {
                     console.log("got the token:", response.data.data);

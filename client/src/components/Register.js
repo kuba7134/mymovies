@@ -11,7 +11,7 @@ const Register = () => {
 
     const onSubmit = (data) => {
         console.log(data)
-        axios.post('http://localhost:8000/register', data)
+        axios.post('https://my-movies7.herokuapp.com/register', data)
             .then(function (response) {
                 setResponse(response)
                 console.log(response)

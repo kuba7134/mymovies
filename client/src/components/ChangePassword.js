@@ -10,7 +10,7 @@ const ChangePassword = () => {
     const onSubmit = (data) => {
         data.token = localStorage.token
         console.log(data)
-        axios.post('http://localhost:8000/changepassword', data)
+        axios.post('https://my-movies7.herokuapp.com/changepassword', data)
             .then(function (response) {
                 setResponse(true)
             })

@@ -1,8 +1,13 @@
 
 import Movie from "./SingleMovie";
 import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect } from "react";
 
 const Movies = (props) => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        props.setToggle(!props.toggle)
+    }, [])
     return (
         <AnimatePresence>
             {props.results && props.results !== "loading" &&

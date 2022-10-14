@@ -174,7 +174,6 @@ form button {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  width: calc(100%- 4em);
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr 1fr;
 }
@@ -476,7 +475,6 @@ p {
     row-gap: 5px;
     padding: 10px;
     padding-right: 20px;
-    position: static;
     width: calc(100% - 30px);
 
     & .rightSide {

@@ -9,7 +9,7 @@ const Movie = (props) => {
     let data2 = { imdbID: props.movie.imdbID, token: localStorage.token }
 
     const handleClick = () => {
-        axios.post('http://localhost:8000/favourites', data)
+        axios.post('https://my-movies7.herokuapp.com/favourites', data)
             .then(function (response) {
                 console.log(response);
             })
@@ -22,7 +22,7 @@ const Movie = (props) => {
     }
 
     const handleClick2 = () => {
-        axios.delete('http://localhost:8000/favourites', { data: data2 })
+        axios.delete('https://my-movies7.herokuapp.com/favourites', { data: data2 })
             .then(function (response) {
                 console.log(response);
             })
@@ -47,8 +47,6 @@ const Movie = (props) => {
             transition: { duration: .3}
         }
     }
-
-
 
     return (
         <motion.div

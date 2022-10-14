@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const MyMovies = (props) => {
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         props.setToggle(!props.toggle)
     }, [])
 

@@ -23,7 +23,7 @@ function App() {
     e.preventDefault();
     const options = {
       method: 'GET',
-      url: 'http://localhost:8000/search',
+      url: 'https://my-movies7.herokuapp.com/search',
       params: { s: title, r: 'json', page: 1, type, year },
     };
     axios.request(options).then(function (response) {
@@ -56,7 +56,7 @@ function App() {
     console.log(showMore)
     const options = {
       method: 'GET',
-      url: 'http://localhost:8000/search',
+      url: 'https://my-movies7.herokuapp.com/search',
       params: showMore,
     };
     axios.request(options).then(function (response) {
@@ -73,12 +73,9 @@ function App() {
     });
   }
 
-
-
-
   useEffect(() => {
     const token = localStorage.token
-    axios.get('http://localhost:8000/favourites', {
+    axios.get('https://my-movies7.herokuapp.com/favourites', {
       params: {
         token
       }
@@ -94,9 +91,6 @@ function App() {
         };
       });
   }, [toggle])
-
-
-
 
   return (
     <div className="App">

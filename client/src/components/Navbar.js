@@ -12,7 +12,7 @@ const Navbar = (props) => {
     return (
         <nav>
             <Link style={{ textDecoration: 'none', color: "black" }} to={`/`}>
-                <motion.h1 initial={{ fontSize: 0, opacity: 0 }} animate={{ fontSize: "1.5em", opacity: 1, transition: { duration: .3 } }}>My movies</motion.h1>
+                <motion.h1 initial={{ fontSize: 0, opacity: 0 }} animate={{ fontSize: "1.5em", opacity: 1, transition: { duration: .3 } }}>My moviess</motion.h1>
             </Link>
             <motion.div
                 className="rightSide"

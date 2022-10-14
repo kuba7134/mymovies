@@ -32,11 +32,15 @@ app.use(limiter)
 
 const speedLimiter = slowDown({
     windowMs: 30 * 1000, // 15 minutes
-    delayAfter: 30, // allow 100 requests per 15 minutes, then...
+    delayAfter: 20, // allow 100 requests per 15 minutes, then...
     delayMs: 500 // begin adding 500ms of delay per request above 100:
 });
 //  apply to all requests
 app.use(speedLimiter);
+
+app.get("/", (req,res) => {
+  res.json("WORKING")
+})
 
 app.get('/favourites', async (req, res) => {
     const token = req.query.token
