@@ -307,6 +307,10 @@ form button {
   background-color: #e1ac1d;
   border-radius: 5px;
   padding: 20px;
+  width: 85%;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .single-movie {
@@ -324,8 +328,7 @@ form button {
 
 .single-movie:hover {
   transform: translateY(-1px) scale(1.01);
-  box-shadow: 7px 7px 7px;
-  // box-shadow: 0px 0px 7px #e1ac1d;
+  box-shadow: 0px 0px 7px #e1ac1d;
 }
 
 .single-movie-parent {
@@ -546,7 +549,7 @@ p {
     grid-template-areas:
       "home camera user"
       "search search search";
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
     row-gap: 5px;
     padding: 10px;
@@ -673,7 +676,7 @@ p {
     display: flex;
     align-items: center;
     padding: 5px 2px;
-
+    width: calc(100% - 4px);
     & form {
       padding-bottom: 0;
     }

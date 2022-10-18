@@ -1,5 +1,6 @@
 import Movie from "./SingleMovie";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 
 const Movies = props => {
   useEffect(() => {
