@@ -51,15 +51,7 @@ const Seats = () => {
         <img className="logo-img" src="pics/3.png" alt="3" />
         <img className="logo-img" src="pics/4.png" alt="4" />
       </div>
-      <motion.img
-        src="pics/siedzenia2.jpg"
-        alt="seats"
-        className="seats-img"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.1 }}
-        viewport={{ once: true }}
-      />
+      <img src="pics/siedzenia2.jpg" alt="seats" className="seats-img" />
     </div>
   );
 };

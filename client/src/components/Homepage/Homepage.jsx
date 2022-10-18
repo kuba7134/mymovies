@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import SingleNews from "./SingleNews";
 import Seats from "./Seats";
+import { motion } from "framer-motion";
 
 const Homepage = () => {
   const [news, setNews] = useState();
@@ -20,7 +21,12 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className="container-home">
+    <motion.div
+      className="container-home"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Seats />
       <div className="news-container">
         <ul className="news-list">
@@ -28,7 +34,7 @@ const Homepage = () => {
             news.map((item, index) => <SingleNews key={index} news={item} />)}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
